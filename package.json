@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/artbels/cyr2lat-translit/issues"
   },
-  "homepage": "https://github.com/artbels/cyr2lat-translit#readme"
+  "homepage": "https://github.com/artbels/cyr2lat-translit#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
 }
