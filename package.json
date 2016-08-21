@@ -1,0 +1,19 @@
+{
+  "name": "cyr2lat-translit",
+  "version": "1.0.0",
+  "description": "create url slug from cyrillic or mixed string",
+  "main": "translit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artbels/cyr2lat-translit.git"
+  },
+  "author": "artbels",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/artbels/cyr2lat-translit/issues"
+  },
+  "homepage": "https://github.com/artbels/cyr2lat-translit#readme"
+}
