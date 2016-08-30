@@ -63,8 +63,6 @@
       return (letterMap[char] !== undefined) ? letterMap[char] : char;
     }).join("");
 
-    console.log(replLetters);
-
     var replSymb = replLetters.replace(reOtherSymbols, '-');
 
     var replUnnecDelims = removeUnnecessaryDelims(replSymb);
