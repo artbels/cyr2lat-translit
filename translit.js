@@ -60,8 +60,10 @@
 
     var replLetters = input.split('').map(function(char) {
       char = char.toLowerCase();
-      return letterMap[char] || char;
+      return (letterMap[char] !== undefined) ? letterMap[char] : char;
     }).join("");
+
+    console.log(replLetters);
 
     var replSymb = replLetters.replace(reOtherSymbols, '-');
 

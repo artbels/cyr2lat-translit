@@ -7,7 +7,9 @@ var cases = {
       simple: [
         ['Киев, Вузовская ул., 5', 'kiev-vuzovskaya-ul-5'],
         [' Киев, Вузовская ул., 5 ', 'kiev-vuzovskaya-ul-5'],
-        ['Блюхера Василия (Игоря Турчина) улица','blyukhera-vasiliya-igorya-turchina-ulitsa']
+        ['Блюхера Василия (Игоря Турчина) улица','blyukhera-vasiliya-igorya-turchina-ulitsa'],
+        ['Киев, Апрельский пер., 12','kiev-aprelskiy-per-12'],
+
       ],
       mix: [
         ['kashka-малашка', 'kashka-malashka'],
