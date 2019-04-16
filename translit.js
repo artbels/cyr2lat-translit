@@ -62,7 +62,7 @@
 
     var reOtherSymbols = /[^a-z0-9\-_]/gi
 
-    var replLetters = input.split('').map(function (char) {
+    var replLetters = input.replace(/київ/i, 'kyiv').split('').map(function (char) {
       char = char.toLowerCase()
       return (letterMap[char] !== undefined) ? letterMap[char] : char
     }).join('')
@@ -74,7 +74,7 @@
     return replUnnecDelims
 
     function removeUnnecessaryDelims (input) {
-      return input
+      return input        
         .replace(/\-{2,}/g, '-')
         .replace(/_{2,}/g, '_')
         .replace(/[\-\_]+$/g, '')
