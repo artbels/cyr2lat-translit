@@ -1,6 +1,6 @@
 {
   "name": "cyr2lat-translit",
-  "version": "1.0.8",
+  "version": "2.0.1",
   "description": "create url slug from cyrillic or mixed string",
   "main": "translit.js",
   "scripts": {
