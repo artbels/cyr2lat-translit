@@ -1,0 +1,17 @@
+# Ignore environment variables
+.env
+
+# Ignore links and shortcuts
+.lnk
+.url
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+*.log
+
+# Ignore IDE and editor settings
+*.sublime-workspace
+*.sublime-project
+.vscode/
+.idea/

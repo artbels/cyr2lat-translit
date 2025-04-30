@@ -3,12 +3,14 @@
  * @ artbels
  * artbels@gmail.com
  * 2023
- * ver 2.0.0
+ * ver 2
  *
  */
 
 ;(function() {
   var Translit = this.Translit = function(str) {
+    if(typeof str !== 'string') return ''
+
     const reOtherSymbols = /[^a-z0-9\-_]/gi
 
     const replSymb = translit(str)
