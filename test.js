@@ -1,11 +1,24 @@
 const Translit = require("./translit");
 
+test('throws on number input', () => {
+  expect(() => Translit(5)).toThrow('Translit expects a string');
+});
+
+test('throws on undefined input', () => {
+  expect(() => Translit(undefined)).toThrow('Translit expects a string');
+});
+
+test('throws on null input', () => {
+  expect(() => Translit(null)).toThrow('Translit expects a string');
+});
+
 const cases = {
   Translit: {
     module: Translit,
     cases: {
       simple: [
         [' Київ, Вузовская ул., 5 ', 'kyiv-vuzovskaia-ul-5'],
+        [' ыэё ', 'yee'],
       ],
       mix: [
         ['kashka-малашка', 'kashka-malashka'],
@@ -14,14 +27,6 @@ const cases = {
       'multi delims': [
         ['-.kashka__малашка-+)', 'kashka_malashka'],
         ['100% малашка+)', '100-malashka'],
-      ],
-      empty: [
-        [undefined, ''],
-        ['', ''],
-        [null, ''],
-      ],
-      number: [
-        [5, ''],
       ],
     }
   }

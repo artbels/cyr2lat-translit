@@ -2,26 +2,26 @@
  * Cyr2lat translit
  * @ artbels
  * artbels@gmail.com
- * 2023
+ * 2016-2025
  * ver 2
  *
  */
 
-;(function() {
-  var Translit = this.Translit = function(str) {
-    if(typeof str !== 'string') return ''
+;(function () {
+  const Translit = this.Translit = function (str) {
+    if (typeof str !== 'string') throw new TypeError('Translit expects a string')
 
     const reOtherSymbols = /[^a-z0-9\-_]/gi
 
     const replSymb = translit(str)
-    .replace(/[\/\\]/g, '_')
-    .replace(reOtherSymbols, '-')
+      .replace(/[\/\\]/g, '_')
+      .replace(reOtherSymbols, '-')
 
     const replUnnecDelims = removeUnnecessaryDelims(replSymb)
 
     return replUnnecDelims.toLowerCase()
 
-    function removeUnnecessaryDelims(input) {
+    function removeUnnecessaryDelims (input) {
       return input
         .replace(/\-{2,}/g, '-')
         .replace(/_{2,}/g, '_')
@@ -29,7 +29,7 @@
         .replace(/^[\-\_]+/g, '')
     }
 
-    function translit(input) {
+    function translit (input) {
       input = input || ''
 
       return input
@@ -78,6 +78,10 @@
         .replace(/ю/g, 'iu')
         .replace(/(^|\s)я/g, '$1ya')
         .replace(/я/g, 'ia')
+        .replace(/ы/g, 'y')
+        .replace(/ё/g, 'e')
+        .replace(/ъ/g, '')
+        .replace(/э/g, 'e')
         .replace(/А/g, 'A')
         .replace(/Б/g, 'B')
         .replace(/В/g, 'V')
@@ -116,6 +120,9 @@
         .replace(/Ю/g, 'Iu')
         .replace(/(^|\s)Я/g, '$1Ya')
         .replace(/Я/g, 'Ia')
+        .replace(/Ы/g, 'y')
+        .replace(/Ё/g, 'e')
+        .replace(/Э/g, 'e')
         .replace(/'/g, '')
         .replace(/’/g, '')
         .replace(/`/g, '')
@@ -125,4 +132,4 @@
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = Translit
   }
-})();
+})()
